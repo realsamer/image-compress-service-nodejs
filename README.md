@@ -1,24 +1,26 @@
 # Image Compress Service
 
-A Node.js + Express web service that compresses images (JPEG/WEBP/PNG).  
-It serves a simple web page for uploading an image and downloading the compressed result.
+Image Compress Service is a Node.js and Express-based web application that allows users to upload images and compress them into smaller sizes using different formats and quality levels.  
+The application provides a simple web interface and runs entirely on a single Node.js server.
+
+---
 
 ## Tech Stack
 
 - Node.js
-- Express
-- Multer (file upload)
+- Express.js
+- Multer (file uploads)
 - Sharp (image compression)
+- HTML, CSS, JavaScript (served statically)
 
-## Features
+---
 
-- Web UI at `/` to upload an image and download the compressed version
-- `POST /compress` for image compression
-- `GET /health` for health check
+## How to Build and Run Using Docker
 
-## Run locally (without Docker)
+### 1. Build the Docker image
+
+From the project root directory:
 
 ```bash
-npm install
-npm run dev
+docker build -t image-compress-service .
 ```
