@@ -1,0 +1,33 @@
+# Node dependencies (installed inside container)
+node_modules
+
+# Git & metadata
+.git
+.gitignore
+
+# Docker files not needed in image
+Dockerfile
+docker-compose.yml
+
+# Environment files
+.env
+.env.*
+
+# Docs & screenshots (not needed at runtime)
+docs
+README.md
+
+# Build output
+dist
+build
+coverage
+
+# Logs & temp files
+npm-debug.log*
+yarn-error.log*
+tmp
+uploads
+
+# OS files
+.DS_Store
+Thumbs.db
