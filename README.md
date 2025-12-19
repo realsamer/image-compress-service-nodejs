@@ -71,7 +71,8 @@ Build the optimized image:
 
 ```bash
 docker build -t image-compress-service-nodejs:multistage .
-
+docker run --name imgzip -p 3000:3000 image-compress-service-nodejs:multistage
+```
 
 ## Instructor Acknowledgement
 
@@ -82,4 +83,3 @@ GitHub: https://github.com/Yosef-AlSabbah
 
 for his guidance, constructive feedback, and academic supervision throughout this assignment.
 His suggestions directly contributed to improving the project structure, Docker configuration, and documentation quality.
-```
