@@ -50,12 +50,36 @@ This is the **recommended and easiest** way to run the project.
 docker compose up --build
 ```
 
+## Bonus: Multi-stage Docker Build (Image Size Optimization)
+
+This project uses a **multi-stage Docker build** to optimize the final Docker image size and improve runtime efficiency.
+
+The Dockerfile is structured into multiple stages:
+
+- A **dependencies stage** that installs only the required production dependencies.
+- A **final runtime stage** that copies only the necessary application files and dependencies.
+
+By separating the build process from the runtime environment, this approach results in:
+
+- A smaller and cleaner Docker image
+- Faster container startup time
+- Reduced attack surface in the final image
+
+### Build and Run the Multi-stage Image
+
+Build the optimized image:
+
+```bash
+docker build -t image-compress-service-nodejs:multistage .
+
+
 ## Instructor Acknowledgement
 
 This project was developed as part of the **Operating Systems Laboratory** coursework.
 
-I would like to sincerely thank **Yosef Al Sabbah**  
+I would like to sincerely thank **Yosef Al Sabbah**
 GitHub: https://github.com/Yosef-AlSabbah
 
-for his guidance, constructive feedback, and academic supervision throughout this assignment.  
+for his guidance, constructive feedback, and academic supervision throughout this assignment.
 His suggestions directly contributed to improving the project structure, Docker configuration, and documentation quality.
+```
